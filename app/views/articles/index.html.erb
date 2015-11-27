@@ -35,7 +35,7 @@
 <div id="calendar">
   <h2 id="month">
     <%= link_to "<", articles_path(:month => (@date.beginning_of_month-1).strftime("%Y-%m-%d")) %>
-    <%=h @date.strftime("%B %Y %D") %>
+    <%=h @date.strftime("%B %Y") %>
     <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %>
   </h2>
 
