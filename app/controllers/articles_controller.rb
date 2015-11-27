@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+      puts params[:month]
       @articles = Article.all
       @date = params[:month] ? Date.parse(params[:month]) : Date.today
   end

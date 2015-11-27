@@ -34,19 +34,21 @@
 
 <div id="calendar">
   <h2 id="month">
-    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
-    <%=h @date.strftime("%B %Y") %>
-    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+    <%= link_to "<", articles_path(:month => (@date.beginning_of_month-1).strftime("%Y-%m-%d")) %>
+    <%=h @date.strftime("%B %Y %D") %>
+    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %>
   </h2>
 
 
-  <%= calendar_for(@articles) do |t| %>
+  <%= calendar_for(@articles, :year => @date.year, :month => @date.month) do |t| %>
     <%= t.head('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun') %>
     <%= t.day(:day_method => :published_on) do |day, articles| %>
-      <%= day.day %>
-      <% articles.each do |article| %>
-        <%= h(article.name) %>
-      <% end %>
+      <%= link_to '#' do %>
+        <%= day.day %>
+        <% articles.each do |article| %>
+          <%= h(article.name) %>
+        <% end %>
+     <% end %>   
     <% end %>
   <% end %>
 
