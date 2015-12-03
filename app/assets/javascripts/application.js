@@ -14,6 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(function (){
-        $('#article_published_on').datepicker();
-});

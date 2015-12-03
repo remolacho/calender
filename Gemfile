@@ -45,5 +45,5 @@ group :development do
   gem 'spring'
 end
 
-gem "table_builder"#, :git => "git://github.com/watu/table_builder.git"
+#gem "table_builder"#, :git => "git://github.com/watu/table_builder.git"
 gem "watu_table_builder", :require => "table_builder"

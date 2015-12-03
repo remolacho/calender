@@ -43,6 +43,11 @@
   font-size: 16px;
 }
 
+#calendar :hover {
+  background: #E6E6E6;
+  color: #777;
+}
+
 #calendar .notmonth {
   color: #CCC;
 }
