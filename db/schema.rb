@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20151127190230) do
     t.string   "name"
     t.float    "price"
     t.date     "published_on"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "status",       default: 0
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

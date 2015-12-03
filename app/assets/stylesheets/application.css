@@ -43,6 +43,10 @@
   font-size: 16px;
 }
 
+#calendar a {
+  text-decoration: none;
+}
+
 #calendar :hover {
   background: #E6E6E6;
   color: #777;
